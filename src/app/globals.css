@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Campos de formulario unificados */
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="time"],
+  input[type="email"],
+  select,
+  textarea {
+    @apply w-full px-4 py-3 border border-slate-200 rounded-xl bg-white text-slate-800 placeholder-slate-400 focus:border-red-600 focus:ring-2 focus:ring-red-100 focus:outline-none transition-all duration-200 text-sm !important;
+  }
+
+  /* Etiquetas unificadas */
+  label {
+    @apply block text-sm font-bold text-slate-600 mb-2 !important;
+  }
+
+  /* Tablas unificadas */
+  table {
+    @apply w-full text-left border-collapse text-sm text-slate-700 !important;
+  }
+
+  thead tr {
+    @apply bg-slate-50 border-b border-slate-100 text-slate-500 font-bold uppercase tracking-wider text-[11px] !important;
+  }
+
+  th {
+    @apply p-4 font-bold !important;
+  }
+
+  td {
+    @apply p-4 border-b border-slate-50 align-middle !important;
+  }
+
+  tbody tr {
+    @apply hover:bg-slate-50/50 transition-colors duration-150 !important;
+  }
+
+  /* Títulos unificados */
+  h2 {
+    @apply text-xl md:text-2xl font-bold text-slate-800 tracking-tight mb-6 pb-4 border-b border-slate-100 !important;
+  }
+
+  h3 {
+    @apply text-base md:text-lg font-bold text-slate-800 tracking-tight mb-4 !important;
+  }
+
+  /* Botones estándar redondeados */
+  button:not(.flex-shrink-0) {
+    @apply rounded-xl transition-all duration-200 !important;
+  }
+}
+
+@layer utilities {
+  /* Ocultar barra de desplazamiento manteniendo funcionalidad de scroll */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE y Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
